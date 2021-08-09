@@ -1,0 +1,1 @@
+// Setup sequelize connection in this file
