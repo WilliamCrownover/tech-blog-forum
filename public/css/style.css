@@ -9,6 +9,10 @@
     --midColor: #a8a6a7;
 }
 
+html {
+    background-color: var(--lightColor);
+}
+
 nav {
     display: flex;
 }
@@ -39,4 +43,32 @@ h1 {
     background-color: var(--lightColor);
     font-weight: 700;
     box-shadow: 5px 5px var(--midColor);
+}
+
+.blogpostCard {
+    margin: 24px 50px;
+    border: solid 4px var(--darkColor);
+    border-radius: 4px;
+}
+
+.blogpostTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    background-color: var(--darkColor);
+}
+
+h2, h4 {
+    margin: 6px 20px 10px 20px;
+    color: var(--lightColor);
+    font-weight: 400;
+}
+
+h4 {
+    font-size: .9rem;
+}
+
+p {
+    margin: 20px 20px 10px 20px;
+    font-size: 1.1rem;
 }
