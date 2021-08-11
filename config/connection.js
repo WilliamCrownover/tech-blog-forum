@@ -1,4 +1,4 @@
-// Rewuired modules
+// Required modules
 const Sequelize = require('sequelize');
 require('dotenv').config();
 
