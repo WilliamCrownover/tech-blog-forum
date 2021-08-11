@@ -1,8 +1,8 @@
 // Required modules
 const router = require('express').Router();
 // Required files
-const apiRoutes = require('./api');
 const homeRoutes = require('./homeRoutes');
+const apiRoutes = require('./api');
 
 // Routing
 router.use('/', homeRoutes);
