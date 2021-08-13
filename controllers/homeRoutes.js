@@ -24,6 +24,16 @@ router.get('/', async (req, res) => {
     }
 });
 
+// Signup route
+router.get('/signup', async (req, res) => {
+    if (req.session.logged_in) {
+        res.redirect('/');
+        return;
+    }
+
+    res.render('signup');
+})
+
 // Login route
 router.get('/login', async (req, res) => {
     if (req.session.logged_in) {
