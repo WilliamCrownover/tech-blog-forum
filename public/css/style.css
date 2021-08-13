@@ -93,6 +93,7 @@ p {
 
 #newPostBtn {
     margin: 0 auto;
+    margin-top: 20px;
     display: block;
     background-color: var(--darkColor);
     border: none;
