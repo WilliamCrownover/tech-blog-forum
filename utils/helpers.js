@@ -1,3 +1,6 @@
 module.exports = {
-    // Write helper methods for html views here
+    formatDate: (date) => {
+        // Format date as MM/DD/YYYY
+        return date.toLocaleDateString();
+    }
 };
