@@ -107,3 +107,35 @@ p {
     background-color: var(--darkerMidColor);
     transition: background-color .3s;
 }
+
+.form-group {
+    margin: 10px 15px;
+}
+
+label {
+    font-size: 1.1rem;
+}
+
+input, .loginBtn {
+    width: 100%;
+    height: 40px;
+    border: none;
+    margin-top: 5px;
+    font-size: 1.1rem;
+}
+
+input {
+    padding-left: 20px;
+}
+
+.loginBtn {
+    background-color: var(--darkerMidColor);
+    color: var(--almostWhite);
+    
+    border-radius: 8px;
+}
+
+.switchLoginSignup {
+    color: blue;
+    margin-left: 15px;
+}
