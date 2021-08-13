@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "title": "Everyone needs to see this!",
+        "content": "This technology could change the world and here's why. I'll list out a few reasons why I believe this in my post.",
+        "userId": 1
+    },
+    {
+        "id": 2,
+        "title": "Full-stack web development rocks",
+        "content": "These are the skills you will need to be an great web developer...",
+        "userId": 2
+    }
+]

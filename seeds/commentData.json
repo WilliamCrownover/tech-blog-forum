@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "content": "That is awesome!",
+        "userId": 1,
+        "blogpostId": 2
+    },
+    {
+        "id": 2,
+        "content": "I know, right?",
+        "userId": 2,
+        "blogpostId": 2
+    }
+]
