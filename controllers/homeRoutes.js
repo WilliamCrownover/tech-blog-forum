@@ -17,7 +17,8 @@ router.get('/', async (req, res) => {
         const blogposts = blogpostData.map(serialize);
 
         res.render('homepage', {
-            blogposts
+            blogposts,
+            logged_in: req.session.logged_in
         });
         
     } catch (err) {
