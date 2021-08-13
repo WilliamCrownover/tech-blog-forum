@@ -4,9 +4,11 @@
 }
 
 :root {
-    --lightColor: #d8ead2;
-    --darkColor: #241011;
+    --lightColor: #eae1d2;
+    --darkColor: #101024;
     --midColor: #a8a6a7;
+    --darkerMidColor: #666666;
+    --almostWhite: #e6e6e6;
 }
 
 html {
@@ -71,4 +73,37 @@ h4 {
 p {
     margin: 20px 20px 10px 20px;
     font-size: 1.1rem;
+}
+
+.dashView {
+    margin: 24px 50px;
+    border: solid 4px var(--darkerMidColor);
+    border-radius: 10px;
+    background-color: var(--darkerMidColor);
+}
+
+.dashView .blogpostTitle {
+    background-color:initial;
+}
+
+.dashView .blogpostTitle h2 {
+    color: var(--almostWhite);
+    margin-bottom: 6px;
+}
+
+#newPostBtn {
+    margin: 0 auto;
+    display: block;
+    background-color: var(--darkColor);
+    border: none;
+    color: var(--almostWhite);
+    font-size: 1.8rem;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: background-color .3s;
+}
+
+#newPostBtn:hover {
+    background-color: var(--darkerMidColor);
+    transition: background-color .3s;
 }
