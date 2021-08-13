@@ -1,9 +1,11 @@
 // URL localhost:3001/dashboard
 // Required modules
 const router = require('express').Router();
+// Required files
+const withAuth = require('../utils/auth');
 
 // Home route
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
     try {
         res.render('dashboard');
     } catch (err) {
