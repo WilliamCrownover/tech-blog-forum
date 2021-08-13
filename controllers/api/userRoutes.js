@@ -1,4 +1,4 @@
-// URL localhost:3001/api/
+// URL localhost:3001/api/users
 // Required modules
 const router = require('express').Router();
 // Required files
