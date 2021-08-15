@@ -16,8 +16,29 @@ router.get('/', async (req, res) => {
                     ]
                 } 
             ]
-        })
+        });
 
+        res.json(blogpostData);
+
+    } catch (err) {
+        res.status(500).json(err);
+    }
+})
+
+// Get one blogpost data testing
+router.get('/:id', async (req, res) => {
+    try {
+        const blogpostData = await Blogpost.findByPk(req.params.id, {
+            include: [ 
+                { model: User, attributes: ['username'] },
+                { model: Comment, 
+                    include: [
+                        { model: User, attributes: ['username'] }
+                    ]
+                } 
+            ]
+        });
+        console.log('@@@@@@@@@');
         res.json(blogpostData);
 
     } catch (err) {

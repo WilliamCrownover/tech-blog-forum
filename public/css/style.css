@@ -140,3 +140,7 @@ input {
     color: blue;
     margin-left: 15px;
 }
+
+.blogpostLink {
+    margin: 0;
+}
