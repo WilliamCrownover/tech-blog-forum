@@ -2,7 +2,24 @@
 // Required modules
 const router = require('express').Router();
 // Required files
-const { User } = require('../../models');
+const { User, Blogpost, Comment } = require('../../models');
+
+// GET All User data testing
+router.get('/', async (req, res) => {
+    try {
+        const userData = await User.findAll({
+            include: [ 
+                { model: Blogpost },
+                { model: Comment }
+            ]
+        })
+
+        res.json(userData);
+
+    } catch (err) {
+        res.status(500).json(err);
+    }
+})
 
 // Create new user
 router.post('/', async (req, res) => {
