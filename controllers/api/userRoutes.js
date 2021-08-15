@@ -4,7 +4,7 @@ const router = require('express').Router();
 // Required files
 const { User, Blogpost, Comment } = require('../../models');
 
-// GET All User data testing
+// GET All User data with blogposts and comments testing
 router.get('/', async (req, res) => {
     try {
         const userData = await User.findAll({
