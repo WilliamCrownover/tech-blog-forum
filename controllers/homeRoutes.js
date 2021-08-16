@@ -11,6 +11,9 @@ router.get('/', async (req, res) => {
         const blogpostData = await Blogpost.findAll({
             include: [
                 { model: User }
+            ],
+            order: [
+                [ 'dateCreated', 'DESC' ]
             ]
         });
 
