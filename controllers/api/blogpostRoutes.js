@@ -97,5 +97,21 @@ router.put('/:id', withAuth, async (req, res) => {
     }
 });
 
+// Delete blogpost
+router.delete('/:id', withAuth, async (req, res) => {
+    try {
+        const blogpostData = await Blogpost.destroy({
+            where: {
+                id: req.params.id
+            }
+        });
+
+        res.status(200).json(blogpostData);
+
+    } catch (err) {
+        res.status(400).json(err);
+    }
+});
+
 // Export
 module.exports = router;
