@@ -43,5 +43,24 @@ router.get('/newpost', withAuth, async (req, res) => {
     }
 });
 
+// Edit blogpost view
+router.get('/:id', withAuth, async (req, res) => {
+    try {
+
+        const blogpostData = await Blogpost.findByPk(req.params.id);
+
+        const blogpost = blogpostData.get({ plain: true });
+
+        res.render('editBlogpost', {
+            blogpost,
+            logged_in: req.session.logged_in
+        });
+        
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
+
 // Export
 module.exports = router;
