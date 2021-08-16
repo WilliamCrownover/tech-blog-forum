@@ -3,8 +3,11 @@
 </section>
 <div class="blogpostCard">
     <div class="blogpostTitle">
-        <h2>{{blogpost.title}}</h2>
-        <h4>Posted by {{blogpost.user.username}} on {{ formatDate blogpost.dateCreated}}</h3>
+        <h2>{{ blogpost.title }}</h2>
+        <h4>Posted by {{ blogpost.user.username }} on {{ formatDate blogpost.dateCreated }}</h3>
     </div>
-    <p>{{blogpost.content}}</p>
+    <p>{{ blogpost.content }}</p>
 </div>
+{{#each blogpost.comments as |comment| }}
+    {{> comment }}
+{{/each}}

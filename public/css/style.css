@@ -47,17 +47,26 @@ h1 {
     box-shadow: 5px 5px var(--midColor);
 }
 
-.blogpostCard {
+.blogpostCard, .commentCard {
     margin: 24px 50px;
     border: solid 4px var(--darkColor);
     border-radius: 4px;
 }
 
-.blogpostTitle {
+.blogpostTitle, .commentTitle {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     background-color: var(--darkColor);
+}
+
+.commentTitle {
+    height: 40px;
+    margin-bottom: 30px;
+}
+
+.commentCard {
+    padding-bottom: 20px;
 }
 
 h2, h4 {
