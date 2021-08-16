@@ -146,8 +146,14 @@ input {
     padding-left: 20px;
 }
 
-#content-new {
+textarea {
     height: 80px;
+    width: 100%;
+    resize: none;
+    border: none;
+    margin-top: 5px;
+    padding: 10px 20px;
+    font-size: 1.1rem;
 }
 
 .loginBtn, .commentBtn, .createPostBtn {
