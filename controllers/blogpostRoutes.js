@@ -3,8 +3,6 @@
 const router = require('express').Router();
 // Required files
 const { Blogpost, User, Comment } = require('../models');
-const withAuth = require('../utils/auth');
-const serialize = require('../utils/serialize');
 
 // Display single blogpost with comments
 router.get('/:id', async (req, res) => {
