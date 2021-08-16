@@ -62,5 +62,20 @@ router.post('/comment', withAuth, async (req, res) => {
     }
 });
 
+// Create new blogpost
+router.post('/', withAuth, async (req, res) => {
+    try {
+        const blogpostData = await Blogpost.create({
+            ...req.body,
+            userId: req.session.user_id
+        });
+
+        res.status(200).json(blogpostData);
+
+    } catch (err) {
+        res.status(400).json(err);
+    }
+});
+
 // Export
 module.exports = router;
