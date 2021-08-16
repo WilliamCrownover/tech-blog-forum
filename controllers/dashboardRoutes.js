@@ -30,5 +30,18 @@ router.get('/', withAuth, async (req, res) => {
     }
 });
 
+// Add new blogpost view
+router.get('/newpost', withAuth, async (req, res) => {
+    try {
+
+        res.render('newBlogpost', {
+            logged_in: req.session.logged_in
+        });
+        
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
 // Export
 module.exports = router;
