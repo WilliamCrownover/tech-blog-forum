@@ -3,6 +3,7 @@
 const router = require('express').Router();
 // Required files
 const { User, Blogpost, Comment } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 // GET All Blogpost data with comments and users testing
 router.get('/', async (req, res) => {
@@ -38,13 +39,28 @@ router.get('/:id', async (req, res) => {
                 } 
             ]
         });
-        console.log('@@@@@@@@@');
+
         res.json(blogpostData);
 
     } catch (err) {
         res.status(500).json(err);
     }
 })
+
+// Create new comment
+router.post('/comment', withAuth, async (req, res) => {
+    try {
+        const commentData = await Comment.create({
+            ...req.body,
+            userId: req.session.user_id
+        });
+
+        res.status(200).json(commentData);
+
+    } catch (err) {
+        res.status(400).json(err);
+    }
+});
 
 // Export
 module.exports = router;
