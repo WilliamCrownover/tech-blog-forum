@@ -23,11 +23,17 @@ header {
     background-color: var(--darkColor);
 }
 
-a {
+a, .no-button {
     color: var(--lightColor);
     text-decoration: none;
     font-weight: 400;
     margin-left: 60px;
+}
+
+.no-button {
+    background-color: unset;
+    border: none;
+    padding: 0;
 }
 
 .pageTitle {
@@ -126,7 +132,7 @@ label {
     font-size: 1.1rem;
 }
 
-input, .loginBtn {
+input, .loginBtn, .commentBtn {
     width: 100%;
     height: 40px;
     border: none;
@@ -138,11 +144,16 @@ input {
     padding-left: 20px;
 }
 
-.loginBtn {
+.loginBtn, .commentBtn {
     background-color: var(--darkerMidColor);
     color: var(--almostWhite);
-    
     border-radius: 8px;
+    transition: background-color .3s;
+}
+
+.loginBtn:hover, .commentBtn:hover {
+    background-color: var(--darkColor);
+    transition: background-color .3s;
 }
 
 .switchLoginSignup {
