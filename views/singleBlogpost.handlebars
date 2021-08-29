@@ -11,25 +11,25 @@
 </div>
 
 {{#each blogpost.comments as |comment| }}
-    {{> comment }}
+{{> comment }}
 {{/each}}
 
 {{#if logged_in}}
-    <div class="commentCard">
-        <div class="commentTitle">
-            <h2> </h2>
-        </div>
-        <form class="comment-form">
-            <div class="form-group">
-                <label for="comment-post">Comment</label><br>
-                <input class="form-input" type="text" id="comment-post">
-            </div>
-            <input type="hidden" id="blogpostId" name="blogpostId" value="{{ blogpost.id }}">
-            <div class="form-group">
-                <button class="commentBtn" type="submit">Submit</button>
-            </div>
-        </form>
+<div class="commentCard">
+    <div class="commentTitle">
+        <h2> </h2>
     </div>
+    <form class="comment-form">
+        <div class="form-group">
+            <label for="comment-post">Comment</label><br>
+            <input class="form-input" type="text" id="comment-post">
+        </div>
+        <input type="hidden" id="blogpostId" name="blogpostId" value="{{ blogpost.id }}">
+        <div class="form-group">
+            <button class="commentBtn" type="submit">Submit</button>
+        </div>
+    </form>
+</div>
 
-    <script src="/js/comment.js"></script>
+<script src="/js/comment.js"></script>
 {{/if}}

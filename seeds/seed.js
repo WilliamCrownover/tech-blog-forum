@@ -1,25 +1,26 @@
+/* eslint-disable no-undef */
 // Required modules
-const sequelize = require('../config/connection');
+const sequelize = require( '../config/connection' );
 // Required files
-const { User, Blogpost, Comment } = require('../models');
-const userData = require('./userData.json');
-const blogpostData = require('./blogpostData.json');
-const commentData = require('./commentData.json');
+const { User, Blogpost, Comment } = require( '../models' );
+const userData = require( './userData.json' );
+const blogpostData = require( './blogpostData.json' );
+const commentData = require( './commentData.json' );
 
 // Seed the database
 const seedDatabase = async () => {
-    await sequelize.sync({ force: true });
+	await sequelize.sync( { force: true } );
 
-    await User.bulkCreate(userData, {
-        individualHooks: true,
-        returning: true
-    });
+	await User.bulkCreate( userData, {
+		individualHooks: true,
+		returning: true
+	} );
 
-    await Blogpost.bulkCreate(blogpostData);
+	await Blogpost.bulkCreate( blogpostData );
 
-    await Comment.bulkCreate(commentData);
+	await Comment.bulkCreate( commentData );
 
-    process.exit(0);
+	process.exit( 0 );
 };
 
 seedDatabase();
