@@ -33,8 +33,14 @@ https://tech-blog-forum-mvc.herokuapp.com/
 - express-session
 - connect-session-sequelize
 
+## Future Development
+I will be revisiting this project in the future to expand upon the interactivity of the website and refine the overall graphic design/layout.
+
 ## License
 Licensed under the MIT License - https://opensource.org/licenses/MIT
+
+## Contributing
+You are welcome to fork this repo or make contributions to the project in collaboration with me.
 
 ## Contact
 If you have any questions you can email me at williamcrownover1@gmail.com.
